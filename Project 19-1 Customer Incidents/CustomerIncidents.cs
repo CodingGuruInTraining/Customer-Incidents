@@ -21,7 +21,7 @@ namespace Project_19_1_Customer_Incidents
         {
             this.Validate();
             this.customersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.techSupport_DataDataSet);
+            //this.tableAdapterManager.UpdateAll(this.techSupport_DataDataSet);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,8 +56,9 @@ namespace Project_19_1_Customer_Incidents
                 int custCode = (int)(System.Convert.ChangeType(customerIDToolStripTextBox2.Text, typeof(int)));
 
 
-                this.incidentsTableAdapter.FillBy(this.techSupport_DataDataSet.Incidents, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox1.Text, typeof(int)))));
-                this.customersTableAdapter.FillByCust (this.techSupport_DataDataSet.Customers, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox1.Text, typeof(int)))));
+                //this.incidentsTableAdapter.FillBy(this.techSupport_DataDataSet.Incidents, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox1.Text, typeof(int)))));
+                //this.customersTableAdapter.FillByCust (this.techSupport_DataDataSet.Customers, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox1.Text, typeof(int)))));
+                
                 //this.customersTableAdapter.FillTicketByCust(this.techSupport_DataDataSet.Customers, custCode);
                 //this.customersTableAdapter.FillByCust(this.techSupport_DataDataSet.Customers, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox2.Text, typeof(int)))));
                 
@@ -75,14 +76,14 @@ namespace Project_19_1_Customer_Incidents
 
         private void fillByCustToolStripButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.customersTableAdapter.FillByCust(this.techSupport_DataDataSet.Customers, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox2.Text, typeof(int)))));
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            //try
+            //{
+            //    this.customersTableAdapter.FillByCust(this.techSupport_DataDataSet.Customers, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox2.Text, typeof(int)))));
+            //}
+            //catch (System.Exception ex)
+            //{
+            //    System.Windows.Forms.MessageBox.Show(ex.Message);
+            //}
 
         }
 
