@@ -86,6 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TechSupport_DataDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TechSupport_DataDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechSupport_DataDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CustomerIncidents.resx">
       <DependentUpon>CustomerIncidents.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,8 +123,8 @@
     </None>
     <None Include="TechSupport_DataDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TechSupport_DataDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>TechSupport_DataDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="TechSupport_DataDataSet.xss">
       <DependentUpon>TechSupport_DataDataSet.xsd</DependentUpon>
