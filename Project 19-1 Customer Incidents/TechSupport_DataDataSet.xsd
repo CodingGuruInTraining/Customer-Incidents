@@ -7,7 +7,7 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TechSupport_DataConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TechSupport_DataConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Project_19_1_Customer_Incidents.Properties.Settings.GlobalReference.Default.TechSupport_DataConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CustomersTableAdapter" GeneratorDataComponentClassName="CustomersTableAdapter" Name="Customers" UserDataComponentName="CustomersTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Customers_MainTableAdapter" GeneratorDataComponentClassName="Customers_MainTableAdapter" Name="Customers_Main" UserDataComponentName="Customers_MainTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="TechSupport_DataConnectionString (Settings)" DbObjectName="dbo.Customers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
@@ -114,7 +114,7 @@ where CustomerID = @CustomerID</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="IncidentsTableAdapter" GeneratorDataComponentClassName="IncidentsTableAdapter" Name="Incidents" UserDataComponentName="IncidentsTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Incidents_MainTableAdapter" GeneratorDataComponentClassName="Incidents_MainTableAdapter" Name="Incidents_Main" UserDataComponentName="Incidents_MainTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="TechSupport_DataConnectionString (Settings)" DbObjectName="dbo.Incidents" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
@@ -670,7 +670,7 @@ SELECT CustomerID, Name FROM Customers WHERE (CustomerID = @CustomerID)</Command
   <xs:element name="TechSupport_DataDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TechSupport_DataDataSet" msprop:Generator_UserDSName="TechSupport_DataDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Incidents" msprop:Generator_TableClassName="IncidentsDataTable" msprop:Generator_TableVarName="tableIncidents" msprop:Generator_TablePropName="Incidents" msprop:Generator_RowDeletingName="IncidentsRowDeleting" msprop:Generator_RowChangingName="IncidentsRowChanging" msprop:Generator_RowEvHandlerName="IncidentsRowChangeEventHandler" msprop:Generator_RowDeletedName="IncidentsRowDeleted" msprop:Generator_UserTableName="Incidents" msprop:Generator_RowChangedName="IncidentsRowChanged" msprop:Generator_RowEvArgName="IncidentsRowChangeEvent" msprop:Generator_RowClassName="IncidentsRow">
+        <xs:element name="Incidents_Main" msprop:Generator_TableClassName="Incidents_MainDataTable" msprop:Generator_TableVarName="tableIncidents_Main" msprop:Generator_RowChangedName="Incidents_MainRowChanged" msprop:Generator_TablePropName="Incidents_Main" msprop:Generator_RowDeletingName="Incidents_MainRowDeleting" msprop:Generator_RowChangingName="Incidents_MainRowChanging" msprop:Generator_RowEvHandlerName="Incidents_MainRowChangeEventHandler" msprop:Generator_RowDeletedName="Incidents_MainRowDeleted" msprop:Generator_RowClassName="Incidents_MainRow" msprop:Generator_UserTableName="Incidents_Main" msprop:Generator_RowEvArgName="Incidents_MainRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ProductCode" msprop:Generator_ColumnVarNameInTable="columnProductCode" msprop:Generator_ColumnPropNameInRow="ProductCode" msprop:Generator_ColumnPropNameInTable="ProductCodeColumn" msprop:Generator_UserColumnName="ProductCode">
@@ -692,7 +692,7 @@ SELECT CustomerID, Name FROM Customers WHERE (CustomerID = @CustomerID)</Command
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Customers" msprop:Generator_TableClassName="CustomersDataTable" msprop:Generator_TableVarName="tableCustomers" msprop:Generator_TablePropName="Customers" msprop:Generator_RowDeletingName="CustomersRowDeleting" msprop:Generator_RowChangingName="CustomersRowChanging" msprop:Generator_RowEvHandlerName="CustomersRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomersRowDeleted" msprop:Generator_UserTableName="Customers" msprop:Generator_RowChangedName="CustomersRowChanged" msprop:Generator_RowEvArgName="CustomersRowChangeEvent" msprop:Generator_RowClassName="CustomersRow">
+        <xs:element name="Customers_Main" msprop:Generator_TableClassName="Customers_MainDataTable" msprop:Generator_TableVarName="tableCustomers_Main" msprop:Generator_RowChangedName="Customers_MainRowChanged" msprop:Generator_TablePropName="Customers_Main" msprop:Generator_RowDeletingName="Customers_MainRowDeleting" msprop:Generator_RowChangingName="Customers_MainRowChanging" msprop:Generator_RowEvHandlerName="Customers_MainRowChangeEventHandler" msprop:Generator_RowDeletedName="Customers_MainRowDeleted" msprop:Generator_RowClassName="Customers_MainRow" msprop:Generator_UserTableName="Customers_Main" msprop:Generator_RowEvArgName="Customers_MainRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CustomerID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:int" />
@@ -748,7 +748,7 @@ SELECT CustomerID, Name FROM Customers WHERE (CustomerID = @CustomerID)</Command
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Customers_Find" msprop:Generator_TableClassName="Customers_FindDataTable" msprop:Generator_TableVarName="tableCustomers_Find" msprop:Generator_TablePropName="Customers_Find" msprop:Generator_RowDeletingName="Customers_FindRowDeleting" msprop:Generator_RowChangingName="Customers_FindRowChanging" msprop:Generator_RowEvHandlerName="Customers_FindRowChangeEventHandler" msprop:Generator_RowDeletedName="Customers_FindRowDeleted" msprop:Generator_UserTableName="Customers_Find" msprop:Generator_RowChangedName="Customers_FindRowChanged" msprop:Generator_RowEvArgName="Customers_FindRowChangeEvent" msprop:Generator_RowClassName="Customers_FindRow">
+        <xs:element name="Customers_Find" msprop:Generator_TableClassName="Customers_FindDataTable" msprop:Generator_TableVarName="tableCustomers_Find" msprop:Generator_RowChangedName="Customers_FindRowChanged" msprop:Generator_TablePropName="Customers_Find" msprop:Generator_RowDeletingName="Customers_FindRowDeleting" msprop:Generator_RowChangingName="Customers_FindRowChanging" msprop:Generator_RowEvHandlerName="Customers_FindRowChangeEventHandler" msprop:Generator_RowDeletedName="Customers_FindRowDeleted" msprop:Generator_RowClassName="Customers_FindRow" msprop:Generator_UserTableName="Customers_Find" msprop:Generator_RowEvArgName="Customers_FindRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CustomerID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:int" />
@@ -790,7 +790,7 @@ SELECT CustomerID, Name FROM Customers WHERE (CustomerID = @CustomerID)</Command
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Customers_Incident" msprop:Generator_TableClassName="Customers_IncidentDataTable" msprop:Generator_TableVarName="tableCustomers_Incident" msprop:Generator_TablePropName="Customers_Incident" msprop:Generator_RowDeletingName="Customers_IncidentRowDeleting" msprop:Generator_RowChangingName="Customers_IncidentRowChanging" msprop:Generator_RowEvHandlerName="Customers_IncidentRowChangeEventHandler" msprop:Generator_RowDeletedName="Customers_IncidentRowDeleted" msprop:Generator_UserTableName="Customers_Incident" msprop:Generator_RowChangedName="Customers_IncidentRowChanged" msprop:Generator_RowEvArgName="Customers_IncidentRowChangeEvent" msprop:Generator_RowClassName="Customers_IncidentRow">
+        <xs:element name="Customers_Incident" msprop:Generator_TableClassName="Customers_IncidentDataTable" msprop:Generator_TableVarName="tableCustomers_Incident" msprop:Generator_RowChangedName="Customers_IncidentRowChanged" msprop:Generator_TablePropName="Customers_Incident" msprop:Generator_RowDeletingName="Customers_IncidentRowDeleting" msprop:Generator_RowChangingName="Customers_IncidentRowChanging" msprop:Generator_RowEvHandlerName="Customers_IncidentRowChangeEventHandler" msprop:Generator_RowDeletedName="Customers_IncidentRowDeleted" msprop:Generator_RowClassName="Customers_IncidentRow" msprop:Generator_UserTableName="Customers_Incident" msprop:Generator_RowEvArgName="Customers_IncidentRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CustomerID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:int" />
@@ -846,7 +846,7 @@ SELECT CustomerID, Name FROM Customers WHERE (CustomerID = @CustomerID)</Command
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Incidents_Add" msprop:Generator_TableClassName="Incidents_AddDataTable" msprop:Generator_TableVarName="tableIncidents_Add" msprop:Generator_TablePropName="Incidents_Add" msprop:Generator_RowDeletingName="Incidents_AddRowDeleting" msprop:Generator_RowChangingName="Incidents_AddRowChanging" msprop:Generator_RowEvHandlerName="Incidents_AddRowChangeEventHandler" msprop:Generator_RowDeletedName="Incidents_AddRowDeleted" msprop:Generator_UserTableName="Incidents_Add" msprop:Generator_RowChangedName="Incidents_AddRowChanged" msprop:Generator_RowEvArgName="Incidents_AddRowChangeEvent" msprop:Generator_RowClassName="Incidents_AddRow">
+        <xs:element name="Incidents_Add" msprop:Generator_TableClassName="Incidents_AddDataTable" msprop:Generator_TableVarName="tableIncidents_Add" msprop:Generator_RowChangedName="Incidents_AddRowChanged" msprop:Generator_TablePropName="Incidents_Add" msprop:Generator_RowDeletingName="Incidents_AddRowDeleting" msprop:Generator_RowChangingName="Incidents_AddRowChanging" msprop:Generator_RowEvHandlerName="Incidents_AddRowChangeEventHandler" msprop:Generator_RowDeletedName="Incidents_AddRowDeleted" msprop:Generator_RowClassName="Incidents_AddRow" msprop:Generator_UserTableName="Incidents_Add" msprop:Generator_RowEvArgName="Incidents_AddRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title">
@@ -860,7 +860,7 @@ SELECT CustomerID, Name FROM Customers WHERE (CustomerID = @CustomerID)</Command
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Products" msprop:Generator_TableClassName="ProductsDataTable" msprop:Generator_TableVarName="tableProducts" msprop:Generator_TablePropName="Products" msprop:Generator_RowDeletingName="ProductsRowDeleting" msprop:Generator_RowChangingName="ProductsRowChanging" msprop:Generator_RowEvHandlerName="ProductsRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductsRowDeleted" msprop:Generator_UserTableName="Products" msprop:Generator_RowChangedName="ProductsRowChanged" msprop:Generator_RowEvArgName="ProductsRowChangeEvent" msprop:Generator_RowClassName="ProductsRow">
+        <xs:element name="Products" msprop:Generator_TableClassName="ProductsDataTable" msprop:Generator_TableVarName="tableProducts" msprop:Generator_RowChangedName="ProductsRowChanged" msprop:Generator_TablePropName="Products" msprop:Generator_RowDeletingName="ProductsRowDeleting" msprop:Generator_RowChangingName="ProductsRowChanging" msprop:Generator_RowEvHandlerName="ProductsRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductsRowDeleted" msprop:Generator_RowClassName="ProductsRow" msprop:Generator_UserTableName="Products" msprop:Generator_RowEvArgName="ProductsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ProductCode" msprop:Generator_ColumnVarNameInTable="columnProductCode" msprop:Generator_ColumnPropNameInRow="ProductCode" msprop:Generator_ColumnPropNameInTable="ProductCodeColumn" msprop:Generator_UserColumnName="ProductCode">
@@ -882,7 +882,7 @@ SELECT CustomerID, Name FROM Customers WHERE (CustomerID = @CustomerID)</Command
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Products_Add" msprop:Generator_TableClassName="Products_AddDataTable" msprop:Generator_TableVarName="tableProducts_Add" msprop:Generator_TablePropName="Products_Add" msprop:Generator_RowDeletingName="Products_AddRowDeleting" msprop:Generator_RowChangingName="Products_AddRowChanging" msprop:Generator_RowEvHandlerName="Products_AddRowChangeEventHandler" msprop:Generator_RowDeletedName="Products_AddRowDeleted" msprop:Generator_UserTableName="Products_Add" msprop:Generator_RowChangedName="Products_AddRowChanged" msprop:Generator_RowEvArgName="Products_AddRowChangeEvent" msprop:Generator_RowClassName="Products_AddRow">
+        <xs:element name="Products_Add" msprop:Generator_TableClassName="Products_AddDataTable" msprop:Generator_TableVarName="tableProducts_Add" msprop:Generator_RowChangedName="Products_AddRowChanged" msprop:Generator_TablePropName="Products_Add" msprop:Generator_RowDeletingName="Products_AddRowDeleting" msprop:Generator_RowChangingName="Products_AddRowChanging" msprop:Generator_RowEvHandlerName="Products_AddRowChangeEventHandler" msprop:Generator_RowDeletedName="Products_AddRowDeleted" msprop:Generator_RowClassName="Products_AddRow" msprop:Generator_UserTableName="Products_Add" msprop:Generator_RowEvArgName="Products_AddRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
@@ -895,7 +895,7 @@ SELECT CustomerID, Name FROM Customers WHERE (CustomerID = @CustomerID)</Command
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Customers_Add" msprop:Generator_TableClassName="Customers_AddDataTable" msprop:Generator_TableVarName="tableCustomers_Add" msprop:Generator_TablePropName="Customers_Add" msprop:Generator_RowDeletingName="Customers_AddRowDeleting" msprop:Generator_RowChangingName="Customers_AddRowChanging" msprop:Generator_RowEvHandlerName="Customers_AddRowChangeEventHandler" msprop:Generator_RowDeletedName="Customers_AddRowDeleted" msprop:Generator_UserTableName="Customers_Add" msprop:Generator_RowChangedName="Customers_AddRowChanged" msprop:Generator_RowEvArgName="Customers_AddRowChangeEvent" msprop:Generator_RowClassName="Customers_AddRow">
+        <xs:element name="Customers_Add" msprop:Generator_TableClassName="Customers_AddDataTable" msprop:Generator_TableVarName="tableCustomers_Add" msprop:Generator_RowChangedName="Customers_AddRowChanged" msprop:Generator_TablePropName="Customers_Add" msprop:Generator_RowDeletingName="Customers_AddRowDeleting" msprop:Generator_RowChangingName="Customers_AddRowChanging" msprop:Generator_RowEvHandlerName="Customers_AddRowChangeEventHandler" msprop:Generator_RowDeletedName="Customers_AddRowDeleted" msprop:Generator_RowClassName="Customers_AddRow" msprop:Generator_UserTableName="Customers_Add" msprop:Generator_RowEvArgName="Customers_AddRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CustomerID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:int" />
@@ -912,7 +912,7 @@ SELECT CustomerID, Name FROM Customers WHERE (CustomerID = @CustomerID)</Command
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Customers" />
+      <xs:selector xpath=".//mstns:Customers_Main" />
       <xs:field xpath="mstns:CustomerID" />
     </xs:unique>
     <xs:unique name="Customers_Find_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
@@ -934,7 +934,7 @@ SELECT CustomerID, Name FROM Customers WHERE (CustomerID = @CustomerID)</Command
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Incidents_Products" msdata:parent="Products" msdata:child="Incidents" msdata:parentkey="ProductCode" msdata:childkey="ProductCode" msprop:Generator_UserChildTable="Incidents" msprop:Generator_ChildPropName="GetIncidentsRows" msprop:Generator_UserRelationName="FK_Incidents_Products" msprop:Generator_RelationVarName="relationFK_Incidents_Products" msprop:Generator_UserParentTable="Products" msprop:Generator_ParentPropName="ProductsRow" />
+      <msdata:Relationship name="FK_Incidents_Products" msdata:parent="Products" msdata:child="Incidents_Main" msdata:parentkey="ProductCode" msdata:childkey="ProductCode" msprop:Generator_UserChildTable="Incidents_Main" msprop:Generator_ChildPropName="GetIncidentsRows" msprop:Generator_UserRelationName="FK_Incidents_Products" msprop:Generator_ParentPropName="ProductsRow" msprop:Generator_RelationVarName="relationFK_Incidents_Products" msprop:Generator_UserParentTable="Products" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

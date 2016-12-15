@@ -24,9 +24,9 @@ namespace Project_19_1_Customer_Incidents {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class TechSupport_DataDataSet : global::System.Data.DataSet {
         
-        private CustomersDataTable tableCustomers;
+        private Customers_MainDataTable tableCustomers_Main;
         
-        private IncidentsDataTable tableIncidents;
+        private Incidents_MainDataTable tableIncidents_Main;
         
         private Customers_FindDataTable tableCustomers_Find;
         
@@ -70,11 +70,11 @@ namespace Project_19_1_Customer_Incidents {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Customers"] != null)) {
-                    base.Tables.Add(new CustomersDataTable(ds.Tables["Customers"]));
+                if ((ds.Tables["Customers_Main"] != null)) {
+                    base.Tables.Add(new Customers_MainDataTable(ds.Tables["Customers_Main"]));
                 }
-                if ((ds.Tables["Incidents"] != null)) {
-                    base.Tables.Add(new IncidentsDataTable(ds.Tables["Incidents"]));
+                if ((ds.Tables["Incidents_Main"] != null)) {
+                    base.Tables.Add(new Incidents_MainDataTable(ds.Tables["Incidents_Main"]));
                 }
                 if ((ds.Tables["Customers_Find"] != null)) {
                     base.Tables.Add(new Customers_FindDataTable(ds.Tables["Customers_Find"]));
@@ -116,9 +116,9 @@ namespace Project_19_1_Customer_Incidents {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public CustomersDataTable Customers {
+        public Customers_MainDataTable Customers_Main {
             get {
-                return this.tableCustomers;
+                return this.tableCustomers_Main;
             }
         }
         
@@ -126,9 +126,9 @@ namespace Project_19_1_Customer_Incidents {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public IncidentsDataTable Incidents {
+        public Incidents_MainDataTable Incidents_Main {
             get {
-                return this.tableIncidents;
+                return this.tableIncidents_Main;
             }
         }
         
@@ -259,11 +259,11 @@ namespace Project_19_1_Customer_Incidents {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Customers"] != null)) {
-                    base.Tables.Add(new CustomersDataTable(ds.Tables["Customers"]));
+                if ((ds.Tables["Customers_Main"] != null)) {
+                    base.Tables.Add(new Customers_MainDataTable(ds.Tables["Customers_Main"]));
                 }
-                if ((ds.Tables["Incidents"] != null)) {
-                    base.Tables.Add(new IncidentsDataTable(ds.Tables["Incidents"]));
+                if ((ds.Tables["Incidents_Main"] != null)) {
+                    base.Tables.Add(new Incidents_MainDataTable(ds.Tables["Incidents_Main"]));
                 }
                 if ((ds.Tables["Customers_Find"] != null)) {
                     base.Tables.Add(new Customers_FindDataTable(ds.Tables["Customers_Find"]));
@@ -316,16 +316,16 @@ namespace Project_19_1_Customer_Incidents {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableCustomers = ((CustomersDataTable)(base.Tables["Customers"]));
+            this.tableCustomers_Main = ((Customers_MainDataTable)(base.Tables["Customers_Main"]));
             if ((initTable == true)) {
-                if ((this.tableCustomers != null)) {
-                    this.tableCustomers.InitVars();
+                if ((this.tableCustomers_Main != null)) {
+                    this.tableCustomers_Main.InitVars();
                 }
             }
-            this.tableIncidents = ((IncidentsDataTable)(base.Tables["Incidents"]));
+            this.tableIncidents_Main = ((Incidents_MainDataTable)(base.Tables["Incidents_Main"]));
             if ((initTable == true)) {
-                if ((this.tableIncidents != null)) {
-                    this.tableIncidents.InitVars();
+                if ((this.tableIncidents_Main != null)) {
+                    this.tableIncidents_Main.InitVars();
                 }
             }
             this.tableCustomers_Find = ((Customers_FindDataTable)(base.Tables["Customers_Find"]));
@@ -375,10 +375,10 @@ namespace Project_19_1_Customer_Incidents {
             this.Namespace = "http://tempuri.org/TechSupport_DataDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableCustomers = new CustomersDataTable();
-            base.Tables.Add(this.tableCustomers);
-            this.tableIncidents = new IncidentsDataTable();
-            base.Tables.Add(this.tableIncidents);
+            this.tableCustomers_Main = new Customers_MainDataTable();
+            base.Tables.Add(this.tableCustomers_Main);
+            this.tableIncidents_Main = new Incidents_MainDataTable();
+            base.Tables.Add(this.tableIncidents_Main);
             this.tableCustomers_Find = new Customers_FindDataTable();
             base.Tables.Add(this.tableCustomers_Find);
             this.tableCustomers_Incident = new Customers_IncidentDataTable();
@@ -393,19 +393,19 @@ namespace Project_19_1_Customer_Incidents {
             base.Tables.Add(this.tableCustomers_Add);
             this.relationFK_Incidents_Products = new global::System.Data.DataRelation("FK_Incidents_Products", new global::System.Data.DataColumn[] {
                         this.tableProducts.ProductCodeColumn}, new global::System.Data.DataColumn[] {
-                        this.tableIncidents.ProductCodeColumn}, false);
+                        this.tableIncidents_Main.ProductCodeColumn}, false);
             this.Relations.Add(this.relationFK_Incidents_Products);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeCustomers() {
+        private bool ShouldSerializeCustomers_Main() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeIncidents() {
+        private bool ShouldSerializeIncidents_Main() {
             return false;
         }
         
@@ -501,10 +501,10 @@ namespace Project_19_1_Customer_Incidents {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void CustomersRowChangeEventHandler(object sender, CustomersRowChangeEvent e);
+        public delegate void Customers_MainRowChangeEventHandler(object sender, Customers_MainRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void IncidentsRowChangeEventHandler(object sender, IncidentsRowChangeEvent e);
+        public delegate void Incidents_MainRowChangeEventHandler(object sender, Incidents_MainRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void Customers_FindRowChangeEventHandler(object sender, Customers_FindRowChangeEvent e);
@@ -529,7 +529,7 @@ namespace Project_19_1_Customer_Incidents {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class CustomersDataTable : global::System.Data.TypedTableBase<CustomersRow> {
+        public partial class Customers_MainDataTable : global::System.Data.TypedTableBase<Customers_MainRow> {
             
             private global::System.Data.DataColumn columnCustomerID;
             
@@ -549,8 +549,8 @@ namespace Project_19_1_Customer_Incidents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CustomersDataTable() {
-                this.TableName = "Customers";
+            public Customers_MainDataTable() {
+                this.TableName = "Customers_Main";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -558,7 +558,7 @@ namespace Project_19_1_Customer_Incidents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal CustomersDataTable(global::System.Data.DataTable table) {
+            internal Customers_MainDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -575,7 +575,7 @@ namespace Project_19_1_Customer_Incidents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected CustomersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Customers_MainDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -655,34 +655,34 @@ namespace Project_19_1_Customer_Incidents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CustomersRow this[int index] {
+            public Customers_MainRow this[int index] {
                 get {
-                    return ((CustomersRow)(this.Rows[index]));
+                    return ((Customers_MainRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event CustomersRowChangeEventHandler CustomersRowChanging;
+            public event Customers_MainRowChangeEventHandler Customers_MainRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event CustomersRowChangeEventHandler CustomersRowChanged;
+            public event Customers_MainRowChangeEventHandler Customers_MainRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event CustomersRowChangeEventHandler CustomersRowDeleting;
+            public event Customers_MainRowChangeEventHandler Customers_MainRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event CustomersRowChangeEventHandler CustomersRowDeleted;
+            public event Customers_MainRowChangeEventHandler Customers_MainRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddCustomersRow(CustomersRow row) {
+            public void AddCustomers_MainRow(Customers_MainRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CustomersRow AddCustomersRow(string Name, string Address, string City, string State, string ZipCode, string Phone, string Email) {
-                CustomersRow rowCustomersRow = ((CustomersRow)(this.NewRow()));
+            public Customers_MainRow AddCustomers_MainRow(string Name, string Address, string City, string State, string ZipCode, string Phone, string Email) {
+                Customers_MainRow rowCustomers_MainRow = ((Customers_MainRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Name,
@@ -692,22 +692,22 @@ namespace Project_19_1_Customer_Incidents {
                         ZipCode,
                         Phone,
                         Email};
-                rowCustomersRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowCustomersRow);
-                return rowCustomersRow;
+                rowCustomers_MainRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCustomers_MainRow);
+                return rowCustomers_MainRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CustomersRow FindByCustomerID(int CustomerID) {
-                return ((CustomersRow)(this.Rows.Find(new object[] {
+            public Customers_MainRow FindByCustomerID(int CustomerID) {
+                return ((Customers_MainRow)(this.Rows.Find(new object[] {
                             CustomerID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                CustomersDataTable cln = ((CustomersDataTable)(base.Clone()));
+                Customers_MainDataTable cln = ((Customers_MainDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -715,7 +715,7 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new CustomersDataTable();
+                return new Customers_MainDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -774,28 +774,28 @@ namespace Project_19_1_Customer_Incidents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CustomersRow NewCustomersRow() {
-                return ((CustomersRow)(this.NewRow()));
+            public Customers_MainRow NewCustomers_MainRow() {
+                return ((Customers_MainRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new CustomersRow(builder);
+                return new Customers_MainRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(CustomersRow);
+                return typeof(Customers_MainRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.CustomersRowChanged != null)) {
-                    this.CustomersRowChanged(this, new CustomersRowChangeEvent(((CustomersRow)(e.Row)), e.Action));
+                if ((this.Customers_MainRowChanged != null)) {
+                    this.Customers_MainRowChanged(this, new Customers_MainRowChangeEvent(((Customers_MainRow)(e.Row)), e.Action));
                 }
             }
             
@@ -803,8 +803,8 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.CustomersRowChanging != null)) {
-                    this.CustomersRowChanging(this, new CustomersRowChangeEvent(((CustomersRow)(e.Row)), e.Action));
+                if ((this.Customers_MainRowChanging != null)) {
+                    this.Customers_MainRowChanging(this, new Customers_MainRowChangeEvent(((Customers_MainRow)(e.Row)), e.Action));
                 }
             }
             
@@ -812,8 +812,8 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.CustomersRowDeleted != null)) {
-                    this.CustomersRowDeleted(this, new CustomersRowChangeEvent(((CustomersRow)(e.Row)), e.Action));
+                if ((this.Customers_MainRowDeleted != null)) {
+                    this.Customers_MainRowDeleted(this, new Customers_MainRowChangeEvent(((Customers_MainRow)(e.Row)), e.Action));
                 }
             }
             
@@ -821,14 +821,14 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.CustomersRowDeleting != null)) {
-                    this.CustomersRowDeleting(this, new CustomersRowChangeEvent(((CustomersRow)(e.Row)), e.Action));
+                if ((this.Customers_MainRowDeleting != null)) {
+                    this.Customers_MainRowDeleting(this, new Customers_MainRowChangeEvent(((Customers_MainRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveCustomersRow(CustomersRow row) {
+            public void RemoveCustomers_MainRow(Customers_MainRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -855,7 +855,7 @@ namespace Project_19_1_Customer_Incidents {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "CustomersDataTable";
+                attribute2.FixedValue = "Customers_MainDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -901,7 +901,7 @@ namespace Project_19_1_Customer_Incidents {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class IncidentsDataTable : global::System.Data.TypedTableBase<IncidentsRow> {
+        public partial class Incidents_MainDataTable : global::System.Data.TypedTableBase<Incidents_MainRow> {
             
             private global::System.Data.DataColumn columnProductCode;
             
@@ -913,8 +913,8 @@ namespace Project_19_1_Customer_Incidents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public IncidentsDataTable() {
-                this.TableName = "Incidents";
+            public Incidents_MainDataTable() {
+                this.TableName = "Incidents_Main";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -922,7 +922,7 @@ namespace Project_19_1_Customer_Incidents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal IncidentsDataTable(global::System.Data.DataTable table) {
+            internal Incidents_MainDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -939,7 +939,7 @@ namespace Project_19_1_Customer_Incidents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected IncidentsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Incidents_MainDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -987,34 +987,34 @@ namespace Project_19_1_Customer_Incidents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public IncidentsRow this[int index] {
+            public Incidents_MainRow this[int index] {
                 get {
-                    return ((IncidentsRow)(this.Rows[index]));
+                    return ((Incidents_MainRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event IncidentsRowChangeEventHandler IncidentsRowChanging;
+            public event Incidents_MainRowChangeEventHandler Incidents_MainRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event IncidentsRowChangeEventHandler IncidentsRowChanged;
+            public event Incidents_MainRowChangeEventHandler Incidents_MainRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event IncidentsRowChangeEventHandler IncidentsRowDeleting;
+            public event Incidents_MainRowChangeEventHandler Incidents_MainRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event IncidentsRowChangeEventHandler IncidentsRowDeleted;
+            public event Incidents_MainRowChangeEventHandler Incidents_MainRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddIncidentsRow(IncidentsRow row) {
+            public void AddIncidents_MainRow(Incidents_MainRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public IncidentsRow AddIncidentsRow(ProductsRow parentProductsRowByFK_Incidents_Products, System.DateTime DateOpened, System.DateTime DateClosed, string Title) {
-                IncidentsRow rowIncidentsRow = ((IncidentsRow)(this.NewRow()));
+            public Incidents_MainRow AddIncidents_MainRow(ProductsRow parentProductsRowByFK_Incidents_Products, System.DateTime DateOpened, System.DateTime DateClosed, string Title) {
+                Incidents_MainRow rowIncidents_MainRow = ((Incidents_MainRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         DateOpened,
@@ -1023,15 +1023,15 @@ namespace Project_19_1_Customer_Incidents {
                 if ((parentProductsRowByFK_Incidents_Products != null)) {
                     columnValuesArray[0] = parentProductsRowByFK_Incidents_Products[0];
                 }
-                rowIncidentsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowIncidentsRow);
-                return rowIncidentsRow;
+                rowIncidents_MainRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowIncidents_MainRow);
+                return rowIncidents_MainRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                IncidentsDataTable cln = ((IncidentsDataTable)(base.Clone()));
+                Incidents_MainDataTable cln = ((Incidents_MainDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1039,7 +1039,7 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new IncidentsDataTable();
+                return new Incidents_MainDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1071,28 +1071,28 @@ namespace Project_19_1_Customer_Incidents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public IncidentsRow NewIncidentsRow() {
-                return ((IncidentsRow)(this.NewRow()));
+            public Incidents_MainRow NewIncidents_MainRow() {
+                return ((Incidents_MainRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new IncidentsRow(builder);
+                return new Incidents_MainRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(IncidentsRow);
+                return typeof(Incidents_MainRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.IncidentsRowChanged != null)) {
-                    this.IncidentsRowChanged(this, new IncidentsRowChangeEvent(((IncidentsRow)(e.Row)), e.Action));
+                if ((this.Incidents_MainRowChanged != null)) {
+                    this.Incidents_MainRowChanged(this, new Incidents_MainRowChangeEvent(((Incidents_MainRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1100,8 +1100,8 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.IncidentsRowChanging != null)) {
-                    this.IncidentsRowChanging(this, new IncidentsRowChangeEvent(((IncidentsRow)(e.Row)), e.Action));
+                if ((this.Incidents_MainRowChanging != null)) {
+                    this.Incidents_MainRowChanging(this, new Incidents_MainRowChangeEvent(((Incidents_MainRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1109,8 +1109,8 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.IncidentsRowDeleted != null)) {
-                    this.IncidentsRowDeleted(this, new IncidentsRowChangeEvent(((IncidentsRow)(e.Row)), e.Action));
+                if ((this.Incidents_MainRowDeleted != null)) {
+                    this.Incidents_MainRowDeleted(this, new Incidents_MainRowChangeEvent(((Incidents_MainRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1118,14 +1118,14 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.IncidentsRowDeleting != null)) {
-                    this.IncidentsRowDeleting(this, new IncidentsRowChangeEvent(((IncidentsRow)(e.Row)), e.Action));
+                if ((this.Incidents_MainRowDeleting != null)) {
+                    this.Incidents_MainRowDeleting(this, new Incidents_MainRowChangeEvent(((Incidents_MainRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveIncidentsRow(IncidentsRow row) {
+            public void RemoveIncidents_MainRow(Incidents_MainRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1152,7 +1152,7 @@ namespace Project_19_1_Customer_Incidents {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "IncidentsDataTable";
+                attribute2.FixedValue = "Incidents_MainDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3005,25 +3005,25 @@ namespace Project_19_1_Customer_Incidents {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class CustomersRow : global::System.Data.DataRow {
+        public partial class Customers_MainRow : global::System.Data.DataRow {
             
-            private CustomersDataTable tableCustomers;
+            private Customers_MainDataTable tableCustomers_Main;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal CustomersRow(global::System.Data.DataRowBuilder rb) : 
+            internal Customers_MainRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableCustomers = ((CustomersDataTable)(this.Table));
+                this.tableCustomers_Main = ((Customers_MainDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int CustomerID {
                 get {
-                    return ((int)(this[this.tableCustomers.CustomerIDColumn]));
+                    return ((int)(this[this.tableCustomers_Main.CustomerIDColumn]));
                 }
                 set {
-                    this[this.tableCustomers.CustomerIDColumn] = value;
+                    this[this.tableCustomers_Main.CustomerIDColumn] = value;
                 }
             }
             
@@ -3031,10 +3031,10 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Name {
                 get {
-                    return ((string)(this[this.tableCustomers.NameColumn]));
+                    return ((string)(this[this.tableCustomers_Main.NameColumn]));
                 }
                 set {
-                    this[this.tableCustomers.NameColumn] = value;
+                    this[this.tableCustomers_Main.NameColumn] = value;
                 }
             }
             
@@ -3042,10 +3042,10 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Address {
                 get {
-                    return ((string)(this[this.tableCustomers.AddressColumn]));
+                    return ((string)(this[this.tableCustomers_Main.AddressColumn]));
                 }
                 set {
-                    this[this.tableCustomers.AddressColumn] = value;
+                    this[this.tableCustomers_Main.AddressColumn] = value;
                 }
             }
             
@@ -3053,10 +3053,10 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string City {
                 get {
-                    return ((string)(this[this.tableCustomers.CityColumn]));
+                    return ((string)(this[this.tableCustomers_Main.CityColumn]));
                 }
                 set {
-                    this[this.tableCustomers.CityColumn] = value;
+                    this[this.tableCustomers_Main.CityColumn] = value;
                 }
             }
             
@@ -3064,10 +3064,10 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string State {
                 get {
-                    return ((string)(this[this.tableCustomers.StateColumn]));
+                    return ((string)(this[this.tableCustomers_Main.StateColumn]));
                 }
                 set {
-                    this[this.tableCustomers.StateColumn] = value;
+                    this[this.tableCustomers_Main.StateColumn] = value;
                 }
             }
             
@@ -3075,10 +3075,10 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string ZipCode {
                 get {
-                    return ((string)(this[this.tableCustomers.ZipCodeColumn]));
+                    return ((string)(this[this.tableCustomers_Main.ZipCodeColumn]));
                 }
                 set {
-                    this[this.tableCustomers.ZipCodeColumn] = value;
+                    this[this.tableCustomers_Main.ZipCodeColumn] = value;
                 }
             }
             
@@ -3087,14 +3087,14 @@ namespace Project_19_1_Customer_Incidents {
             public string Phone {
                 get {
                     try {
-                        return ((string)(this[this.tableCustomers.PhoneColumn]));
+                        return ((string)(this[this.tableCustomers_Main.PhoneColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Phone\' in table \'Customers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Phone\' in table \'Customers_Main\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCustomers.PhoneColumn] = value;
+                    this[this.tableCustomers_Main.PhoneColumn] = value;
                 }
             }
             
@@ -3103,64 +3103,64 @@ namespace Project_19_1_Customer_Incidents {
             public string Email {
                 get {
                     try {
-                        return ((string)(this[this.tableCustomers.EmailColumn]));
+                        return ((string)(this[this.tableCustomers_Main.EmailColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'Customers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'Customers_Main\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCustomers.EmailColumn] = value;
+                    this[this.tableCustomers_Main.EmailColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPhoneNull() {
-                return this.IsNull(this.tableCustomers.PhoneColumn);
+                return this.IsNull(this.tableCustomers_Main.PhoneColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPhoneNull() {
-                this[this.tableCustomers.PhoneColumn] = global::System.Convert.DBNull;
+                this[this.tableCustomers_Main.PhoneColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEmailNull() {
-                return this.IsNull(this.tableCustomers.EmailColumn);
+                return this.IsNull(this.tableCustomers_Main.EmailColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEmailNull() {
-                this[this.tableCustomers.EmailColumn] = global::System.Convert.DBNull;
+                this[this.tableCustomers_Main.EmailColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class IncidentsRow : global::System.Data.DataRow {
+        public partial class Incidents_MainRow : global::System.Data.DataRow {
             
-            private IncidentsDataTable tableIncidents;
+            private Incidents_MainDataTable tableIncidents_Main;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal IncidentsRow(global::System.Data.DataRowBuilder rb) : 
+            internal Incidents_MainRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableIncidents = ((IncidentsDataTable)(this.Table));
+                this.tableIncidents_Main = ((Incidents_MainDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string ProductCode {
                 get {
-                    return ((string)(this[this.tableIncidents.ProductCodeColumn]));
+                    return ((string)(this[this.tableIncidents_Main.ProductCodeColumn]));
                 }
                 set {
-                    this[this.tableIncidents.ProductCodeColumn] = value;
+                    this[this.tableIncidents_Main.ProductCodeColumn] = value;
                 }
             }
             
@@ -3168,10 +3168,10 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime DateOpened {
                 get {
-                    return ((global::System.DateTime)(this[this.tableIncidents.DateOpenedColumn]));
+                    return ((global::System.DateTime)(this[this.tableIncidents_Main.DateOpenedColumn]));
                 }
                 set {
-                    this[this.tableIncidents.DateOpenedColumn] = value;
+                    this[this.tableIncidents_Main.DateOpenedColumn] = value;
                 }
             }
             
@@ -3180,14 +3180,14 @@ namespace Project_19_1_Customer_Incidents {
             public System.DateTime DateClosed {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableIncidents.DateClosedColumn]));
+                        return ((global::System.DateTime)(this[this.tableIncidents_Main.DateClosedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DateClosed\' in table \'Incidents\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateClosed\' in table \'Incidents_Main\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableIncidents.DateClosedColumn] = value;
+                    this[this.tableIncidents_Main.DateClosedColumn] = value;
                 }
             }
             
@@ -3195,10 +3195,10 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Title {
                 get {
-                    return ((string)(this[this.tableIncidents.TitleColumn]));
+                    return ((string)(this[this.tableIncidents_Main.TitleColumn]));
                 }
                 set {
-                    this[this.tableIncidents.TitleColumn] = value;
+                    this[this.tableIncidents_Main.TitleColumn] = value;
                 }
             }
             
@@ -3216,13 +3216,13 @@ namespace Project_19_1_Customer_Incidents {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDateClosedNull() {
-                return this.IsNull(this.tableIncidents.DateClosedColumn);
+                return this.IsNull(this.tableIncidents_Main.DateClosedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDateClosedNull() {
-                this[this.tableIncidents.DateClosedColumn] = global::System.Convert.DBNull;
+                this[this.tableIncidents_Main.DateClosedColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3558,12 +3558,12 @@ namespace Project_19_1_Customer_Incidents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public IncidentsRow[] GetIncidentsRows() {
+            public Incidents_MainRow[] GetIncidentsRows() {
                 if ((this.Table.ChildRelations["FK_Incidents_Products"] == null)) {
-                    return new IncidentsRow[0];
+                    return new Incidents_MainRow[0];
                 }
                 else {
-                    return ((IncidentsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Incidents_Products"])));
+                    return ((Incidents_MainRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Incidents_Products"])));
                 }
             }
         }
@@ -3635,22 +3635,22 @@ namespace Project_19_1_Customer_Incidents {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class CustomersRowChangeEvent : global::System.EventArgs {
+        public class Customers_MainRowChangeEvent : global::System.EventArgs {
             
-            private CustomersRow eventRow;
+            private Customers_MainRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CustomersRowChangeEvent(CustomersRow row, global::System.Data.DataRowAction action) {
+            public Customers_MainRowChangeEvent(Customers_MainRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CustomersRow Row {
+            public Customers_MainRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3669,22 +3669,22 @@ namespace Project_19_1_Customer_Incidents {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class IncidentsRowChangeEvent : global::System.EventArgs {
+        public class Incidents_MainRowChangeEvent : global::System.EventArgs {
             
-            private IncidentsRow eventRow;
+            private Incidents_MainRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public IncidentsRowChangeEvent(IncidentsRow row, global::System.Data.DataRowAction action) {
+            public Incidents_MainRowChangeEvent(Incidents_MainRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public IncidentsRow Row {
+            public Incidents_MainRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3916,7 +3916,7 @@ namespace Project_19_1_Customer_Incidents.TechSupport_DataDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class CustomersTableAdapter : global::System.ComponentModel.Component {
+    public partial class Customers_MainTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3930,7 +3930,7 @@ namespace Project_19_1_Customer_Incidents.TechSupport_DataDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public CustomersTableAdapter() {
+        public Customers_MainTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4027,7 +4027,7 @@ namespace Project_19_1_Customer_Incidents.TechSupport_DataDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Customers";
+            tableMapping.DataSetTable = "Customers_Main";
             tableMapping.ColumnMappings.Add("CustomerID", "CustomerID");
             tableMapping.ColumnMappings.Add("Name", "Name");
             tableMapping.ColumnMappings.Add("Address", "Address");
@@ -4125,7 +4125,7 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TechSupport_DataDataSet.CustomersDataTable dataTable) {
+        public virtual int Fill(TechSupport_DataDataSet.Customers_MainDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4138,9 +4138,9 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TechSupport_DataDataSet.CustomersDataTable GetData() {
+        public virtual TechSupport_DataDataSet.Customers_MainDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TechSupport_DataDataSet.CustomersDataTable dataTable = new TechSupport_DataDataSet.CustomersDataTable();
+            TechSupport_DataDataSet.Customers_MainDataTable dataTable = new TechSupport_DataDataSet.Customers_MainDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4149,7 +4149,7 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(TechSupport_DataDataSet.CustomersDataTable dataTable, int CustomerID) {
+        public virtual int FillBy(TechSupport_DataDataSet.Customers_MainDataTable dataTable, int CustomerID) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(CustomerID));
             if ((this.ClearBeforeFill == true)) {
@@ -4163,10 +4163,10 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual TechSupport_DataDataSet.CustomersDataTable FillTicketByCust(int CustomerID) {
+        public virtual TechSupport_DataDataSet.Customers_MainDataTable FillTicketByCust(int CustomerID) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(CustomerID));
-            TechSupport_DataDataSet.CustomersDataTable dataTable = new TechSupport_DataDataSet.CustomersDataTable();
+            TechSupport_DataDataSet.Customers_MainDataTable dataTable = new TechSupport_DataDataSet.Customers_MainDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4175,7 +4175,7 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByCust(TechSupport_DataDataSet.CustomersDataTable dataTable, int CustomerID) {
+        public virtual int FillByCust(TechSupport_DataDataSet.Customers_MainDataTable dataTable, int CustomerID) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(CustomerID));
             if ((this.ClearBeforeFill == true)) {
@@ -4188,7 +4188,7 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TechSupport_DataDataSet.CustomersDataTable dataTable) {
+        public virtual int Update(TechSupport_DataDataSet.Customers_MainDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -4196,7 +4196,7 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(TechSupport_DataDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Customers");
+            return this.Adapter.Update(dataSet, "Customers_Main");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4490,7 +4490,7 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class IncidentsTableAdapter : global::System.ComponentModel.Component {
+    public partial class Incidents_MainTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4504,7 +4504,7 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public IncidentsTableAdapter() {
+        public Incidents_MainTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4601,7 +4601,7 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Incidents";
+            tableMapping.DataSetTable = "Incidents_Main";
             tableMapping.ColumnMappings.Add("ProductCode", "ProductCode");
             tableMapping.ColumnMappings.Add("DateOpened", "DateOpened");
             tableMapping.ColumnMappings.Add("DateClosed", "DateClosed");
@@ -4688,7 +4688,7 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TechSupport_DataDataSet.IncidentsDataTable dataTable) {
+        public virtual int Fill(TechSupport_DataDataSet.Incidents_MainDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4701,9 +4701,9 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TechSupport_DataDataSet.IncidentsDataTable GetData() {
+        public virtual TechSupport_DataDataSet.Incidents_MainDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TechSupport_DataDataSet.IncidentsDataTable dataTable = new TechSupport_DataDataSet.IncidentsDataTable();
+            TechSupport_DataDataSet.Incidents_MainDataTable dataTable = new TechSupport_DataDataSet.Incidents_MainDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4712,7 +4712,7 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(TechSupport_DataDataSet.IncidentsDataTable dataTable, int CustomerID) {
+        public virtual int FillBy(TechSupport_DataDataSet.Incidents_MainDataTable dataTable, int CustomerID) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(CustomerID));
             if ((this.ClearBeforeFill == true)) {
@@ -4725,7 +4725,7 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TechSupport_DataDataSet.IncidentsDataTable dataTable) {
+        public virtual int Update(TechSupport_DataDataSet.Incidents_MainDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -4733,7 +4733,7 @@ WHERE        (Incidents.CustomerID = @CustomerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(TechSupport_DataDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Incidents");
+            return this.Adapter.Update(dataSet, "Incidents_Main");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7607,9 +7607,9 @@ SELECT ProductCode, Name, Version, ReleaseDate FROM Products WHERE (ProductCode 
         
         private UpdateOrderOption _updateOrder;
         
-        private CustomersTableAdapter _customersTableAdapter;
+        private Customers_MainTableAdapter _customers_MainTableAdapter;
         
-        private IncidentsTableAdapter _incidentsTableAdapter;
+        private Incidents_MainTableAdapter _incidents_MainTableAdapter;
         
         private Customers_FindTableAdapter _customers_FindTableAdapter;
         
@@ -7643,12 +7643,12 @@ SELECT ProductCode, Name, Version, ReleaseDate FROM Products WHERE (ProductCode 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public CustomersTableAdapter CustomersTableAdapter {
+        public Customers_MainTableAdapter Customers_MainTableAdapter {
             get {
-                return this._customersTableAdapter;
+                return this._customers_MainTableAdapter;
             }
             set {
-                this._customersTableAdapter = value;
+                this._customers_MainTableAdapter = value;
             }
         }
         
@@ -7657,12 +7657,12 @@ SELECT ProductCode, Name, Version, ReleaseDate FROM Products WHERE (ProductCode 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public IncidentsTableAdapter IncidentsTableAdapter {
+        public Incidents_MainTableAdapter Incidents_MainTableAdapter {
             get {
-                return this._incidentsTableAdapter;
+                return this._incidents_MainTableAdapter;
             }
             set {
-                this._incidentsTableAdapter = value;
+                this._incidents_MainTableAdapter = value;
             }
         }
         
@@ -7769,13 +7769,13 @@ SELECT ProductCode, Name, Version, ReleaseDate FROM Products WHERE (ProductCode 
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._customersTableAdapter != null) 
-                            && (this._customersTableAdapter.Connection != null))) {
-                    return this._customersTableAdapter.Connection;
+                if (((this._customers_MainTableAdapter != null) 
+                            && (this._customers_MainTableAdapter.Connection != null))) {
+                    return this._customers_MainTableAdapter.Connection;
                 }
-                if (((this._incidentsTableAdapter != null) 
-                            && (this._incidentsTableAdapter.Connection != null))) {
-                    return this._incidentsTableAdapter.Connection;
+                if (((this._incidents_MainTableAdapter != null) 
+                            && (this._incidents_MainTableAdapter.Connection != null))) {
+                    return this._incidents_MainTableAdapter.Connection;
                 }
                 if (((this._customers_FindTableAdapter != null) 
                             && (this._customers_FindTableAdapter.Connection != null))) {
@@ -7814,10 +7814,10 @@ SELECT ProductCode, Name, Version, ReleaseDate FROM Products WHERE (ProductCode 
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._customersTableAdapter != null)) {
+                if ((this._customers_MainTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._incidentsTableAdapter != null)) {
+                if ((this._incidents_MainTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._customers_FindTableAdapter != null)) {
@@ -7858,21 +7858,21 @@ SELECT ProductCode, Name, Version, ReleaseDate FROM Products WHERE (ProductCode 
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._incidentsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Incidents.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._incidents_MainTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Incidents_Main.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._incidentsTableAdapter.Update(updatedRows));
+                    result = (result + this._incidents_MainTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._customersTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Customers.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._customers_MainTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Customers_Main.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._customersTableAdapter.Update(updatedRows));
+                    result = (result + this._customers_MainTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -7939,19 +7939,19 @@ SELECT ProductCode, Name, Version, ReleaseDate FROM Products WHERE (ProductCode 
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._incidentsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Incidents.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._incidents_MainTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Incidents_Main.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._incidentsTableAdapter.Update(addedRows));
+                    result = (result + this._incidents_MainTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._customersTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Customers.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._customers_MainTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Customers_Main.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._customersTableAdapter.Update(addedRows));
+                    result = (result + this._customers_MainTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -8045,19 +8045,19 @@ SELECT ProductCode, Name, Version, ReleaseDate FROM Products WHERE (ProductCode 
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._customersTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Customers.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._customers_MainTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Customers_Main.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._customersTableAdapter.Update(deletedRows));
+                    result = (result + this._customers_MainTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._incidentsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Incidents.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._incidents_MainTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Incidents_Main.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._incidentsTableAdapter.Update(deletedRows));
+                    result = (result + this._incidents_MainTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -8108,13 +8108,13 @@ SELECT ProductCode, Name, Version, ReleaseDate FROM Products WHERE (ProductCode 
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._customersTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._customersTableAdapter.Connection) == false))) {
+            if (((this._customers_MainTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._customers_MainTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._incidentsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._incidentsTableAdapter.Connection) == false))) {
+            if (((this._incidents_MainTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._incidents_MainTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -8180,22 +8180,22 @@ SELECT ProductCode, Name, Version, ReleaseDate FROM Products WHERE (ProductCode 
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._customersTableAdapter != null)) {
-                    revertConnections.Add(this._customersTableAdapter, this._customersTableAdapter.Connection);
-                    this._customersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._customersTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._customersTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._customersTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._customersTableAdapter.Adapter);
+                if ((this._customers_MainTableAdapter != null)) {
+                    revertConnections.Add(this._customers_MainTableAdapter, this._customers_MainTableAdapter.Connection);
+                    this._customers_MainTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._customers_MainTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._customers_MainTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._customers_MainTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._customers_MainTableAdapter.Adapter);
                     }
                 }
-                if ((this._incidentsTableAdapter != null)) {
-                    revertConnections.Add(this._incidentsTableAdapter, this._incidentsTableAdapter.Connection);
-                    this._incidentsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._incidentsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._incidentsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._incidentsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._incidentsTableAdapter.Adapter);
+                if ((this._incidents_MainTableAdapter != null)) {
+                    revertConnections.Add(this._incidents_MainTableAdapter, this._incidents_MainTableAdapter.Connection);
+                    this._incidents_MainTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._incidents_MainTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._incidents_MainTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._incidents_MainTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._incidents_MainTableAdapter.Adapter);
                     }
                 }
                 if ((this._customers_FindTableAdapter != null)) {
@@ -8310,13 +8310,13 @@ SELECT ProductCode, Name, Version, ReleaseDate FROM Products WHERE (ProductCode 
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._customersTableAdapter != null)) {
-                    this._customersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._customersTableAdapter]));
-                    this._customersTableAdapter.Transaction = null;
+                if ((this._customers_MainTableAdapter != null)) {
+                    this._customers_MainTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._customers_MainTableAdapter]));
+                    this._customers_MainTableAdapter.Transaction = null;
                 }
-                if ((this._incidentsTableAdapter != null)) {
-                    this._incidentsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._incidentsTableAdapter]));
-                    this._incidentsTableAdapter.Transaction = null;
+                if ((this._incidents_MainTableAdapter != null)) {
+                    this._incidents_MainTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._incidents_MainTableAdapter]));
+                    this._incidents_MainTableAdapter.Transaction = null;
                 }
                 if ((this._customers_FindTableAdapter != null)) {
                     this._customers_FindTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._customers_FindTableAdapter]));
