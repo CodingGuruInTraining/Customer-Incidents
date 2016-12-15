@@ -53,18 +53,24 @@ namespace Project_19_1_Customer_Incidents
         {
             try
             {
-                this.incidentsTableAdapter.FillBy(this.techSupport_DataDataSet.Incidents, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox1.Text, typeof(int)))));
-                this.customersTableAdapter.FillByCust(this.techSupport_DataDataSet.Customers, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox2.Text, typeof(int)))));
-            // http://stackoverflow.com/questions/17672044/binding-multiple-datagridview
+                int custCode = (int)(System.Convert.ChangeType(customerIDToolStripTextBox2.Text, typeof(int)));
+
+                //this.incidentsTableAdapter.FillBy(this.techSupport_DataDataSet.Incidents, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox1.Text, typeof(int)))));
+                this.customersTableAdapter.FillByCust (this.techSupport_DataDataSet.Customers, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox1.Text, typeof(int)))));
+                this.customersTableAdapter.FillTicketByCust(this.techSupport_DataDataSet.Customers, custCode);
+                //this.customersTableAdapter.FillByCust(this.techSupport_DataDataSet.Customers, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox2.Text, typeof(int)))));
+                // http://stackoverflow.com/questions/17672044/binding-multiple-datagridview
             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
-        }
+        } 
 
    
+
+
 
         private void fillByCustToolStripButton_Click(object sender, EventArgs e)
         {
