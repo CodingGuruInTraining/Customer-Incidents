@@ -52,11 +52,13 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.incidentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnNewIncident = new System.Windows.Forms.Button();
             this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
             this.customerIDToolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.customerIDToolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnSrchState = new System.Windows.Forms.ToolStripButton();
             this.customersTableAdapter = new Project_19_1_Customer_Incidents.TechSupport_DataDataSetTableAdapters.CustomersTableAdapter();
             this.tableAdapterManager = new Project_19_1_Customer_Incidents.TechSupport_DataDataSetTableAdapters.TableAdapterManager();
             this.incidentsTableAdapter = new Project_19_1_Customer_Incidents.TechSupport_DataDataSetTableAdapters.IncidentsTableAdapter();
@@ -64,8 +66,6 @@
             this.customerIDToolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.fillByCustToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.fillByCustToolStrip = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnSrchState = new System.Windows.Forms.ToolStripButton();
             customerIDLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             addressLabel = new System.Windows.Forms.Label();
@@ -253,15 +253,15 @@
             this.incidentsBindingSource.DataMember = "Incidents";
             this.incidentsBindingSource.DataSource = this.techSupport_DataDataSet;
             // 
-            // button1
+            // btnNewIncident
             // 
-            this.button1.Location = new System.Drawing.Point(511, 376);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Add New Incident";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnNewIncident.Location = new System.Drawing.Point(511, 376);
+            this.btnNewIncident.Name = "btnNewIncident";
+            this.btnNewIncident.Size = new System.Drawing.Size(110, 23);
+            this.btnNewIncident.TabIndex = 17;
+            this.btnNewIncident.Text = "Add New Incident";
+            this.btnNewIncident.UseVisualStyleBackColor = true;
+            this.btnNewIncident.Click += new System.EventHandler(this.btnNewIncident_Click);
             // 
             // fillByToolStrip
             // 
@@ -295,6 +295,20 @@
             this.fillByToolStripButton.Size = new System.Drawing.Size(34, 22);
             this.fillByToolStripButton.Text = "Find";
             this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnSrchState
+            // 
+            this.btnSrchState.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnSrchState.Image = ((System.Drawing.Image)(resources.GetObject("btnSrchState.Image")));
+            this.btnSrchState.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSrchState.Name = "btnSrchState";
+            this.btnSrchState.Size = new System.Drawing.Size(91, 22);
+            this.btnSrchState.Text = "Search By State";
             // 
             // customersTableAdapter
             // 
@@ -343,28 +357,14 @@
             this.fillByCustToolStrip.TabIndex = 20;
             this.fillByCustToolStrip.Text = "fillByCustToolStrip";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnSrchState
-            // 
-            this.btnSrchState.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnSrchState.Image = ((System.Drawing.Image)(resources.GetObject("btnSrchState.Image")));
-            this.btnSrchState.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSrchState.Name = "btnSrchState";
-            this.btnSrchState.Size = new System.Drawing.Size(91, 22);
-            this.btnSrchState.Text = "Search By State";
-            // 
-            // Form1
+            // CustomerIncidents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 419);
             this.Controls.Add(this.fillByCustToolStrip);
             this.Controls.Add(this.fillByToolStrip);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnNewIncident);
             this.Controls.Add(this.incidentsDataGridView);
             this.Controls.Add(customerIDLabel);
             this.Controls.Add(this.customerIDTextBox);
@@ -380,7 +380,7 @@
             this.Controls.Add(this.phoneTextBox);
             this.Controls.Add(emailLabel);
             this.Controls.Add(this.emailTextBox);
-            this.Name = "Form1";
+            this.Name = "CustomerIncidents";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
@@ -417,7 +417,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNewIncident;
         private System.Windows.Forms.ToolStrip fillByToolStrip;
         private System.Windows.Forms.ToolStripLabel customerIDToolStripLabel1;
         private System.Windows.Forms.ToolStripTextBox customerIDToolStripTextBox1;

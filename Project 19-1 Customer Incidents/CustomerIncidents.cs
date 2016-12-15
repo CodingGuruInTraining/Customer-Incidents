@@ -86,8 +86,10 @@ namespace Project_19_1_Customer_Incidents
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNewIncident_Click(object sender, EventArgs e)
         {
+            frmAddIncident addIncid = new frmAddIncident();
+            addIncid.ShowDialog();
 
         }
     }
