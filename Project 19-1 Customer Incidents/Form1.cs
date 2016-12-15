@@ -55,11 +55,12 @@ namespace Project_19_1_Customer_Incidents
             {
                 int custCode = (int)(System.Convert.ChangeType(customerIDToolStripTextBox2.Text, typeof(int)));
 
-                //this.incidentsTableAdapter.FillBy(this.techSupport_DataDataSet.Incidents, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox1.Text, typeof(int)))));
+
+                this.incidentsTableAdapter.FillBy(this.techSupport_DataDataSet.Incidents, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox1.Text, typeof(int)))));
                 this.customersTableAdapter.FillByCust (this.techSupport_DataDataSet.Customers, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox1.Text, typeof(int)))));
-                this.customersTableAdapter.FillTicketByCust(this.techSupport_DataDataSet.Customers, custCode);
+                //this.customersTableAdapter.FillTicketByCust(this.techSupport_DataDataSet.Customers, custCode);
                 //this.customersTableAdapter.FillByCust(this.techSupport_DataDataSet.Customers, ((int)(System.Convert.ChangeType(customerIDToolStripTextBox2.Text, typeof(int)))));
-                // http://stackoverflow.com/questions/17672044/binding-multiple-datagridview
+                
             }
             catch (System.Exception ex)
             {
@@ -82,6 +83,11 @@ namespace Project_19_1_Customer_Incidents
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

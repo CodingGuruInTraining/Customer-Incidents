@@ -35,6 +35,7 @@
             System.Windows.Forms.Label cityLabel;
             System.Windows.Forms.Label phoneLabel;
             System.Windows.Forms.Label emailLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.customerIDTextBox = new System.Windows.Forms.TextBox();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.techSupport_DataDataSet = new Project_19_1_Customer_Incidents.TechSupport_DataDataSet();
@@ -63,6 +64,8 @@
             this.customerIDToolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.fillByCustToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.fillByCustToolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnSrchState = new System.Windows.Forms.ToolStripButton();
             customerIDLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             addressLabel = new System.Windows.Forms.Label();
@@ -258,13 +261,16 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Add New Incident";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // fillByToolStrip
             // 
             this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.customerIDToolStripLabel1,
             this.customerIDToolStripTextBox1,
-            this.fillByToolStripButton});
+            this.fillByToolStripButton,
+            this.toolStripSeparator1,
+            this.btnSrchState});
             this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillByToolStrip.Name = "fillByToolStrip";
             this.fillByToolStrip.Size = new System.Drawing.Size(680, 25);
@@ -286,8 +292,8 @@
             // 
             this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
-            this.fillByToolStripButton.Text = "FillBy";
+            this.fillByToolStripButton.Size = new System.Drawing.Size(34, 22);
+            this.fillByToolStripButton.Text = "Find";
             this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
             // 
             // customersTableAdapter
@@ -297,6 +303,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Customers_FindTableAdapter = null;
             this.tableAdapterManager.CustomersTableAdapter = this.customersTableAdapter;
             this.tableAdapterManager.IncidentsTableAdapter = this.incidentsTableAdapter;
             this.tableAdapterManager.UpdateOrder = Project_19_1_Customer_Incidents.TechSupport_DataDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -335,6 +342,20 @@
             this.fillByCustToolStrip.Size = new System.Drawing.Size(680, 25);
             this.fillByCustToolStrip.TabIndex = 20;
             this.fillByCustToolStrip.Text = "fillByCustToolStrip";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnSrchState
+            // 
+            this.btnSrchState.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnSrchState.Image = ((System.Drawing.Image)(resources.GetObject("btnSrchState.Image")));
+            this.btnSrchState.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSrchState.Name = "btnSrchState";
+            this.btnSrchState.Size = new System.Drawing.Size(91, 22);
+            this.btnSrchState.Text = "Search By State";
             // 
             // Form1
             // 
@@ -405,6 +426,8 @@
         private System.Windows.Forms.ToolStripTextBox customerIDToolStripTextBox2;
         private System.Windows.Forms.ToolStripButton fillByCustToolStripButton;
         private System.Windows.Forms.ToolStrip fillByCustToolStrip;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton btnSrchState;
     }
 }
 

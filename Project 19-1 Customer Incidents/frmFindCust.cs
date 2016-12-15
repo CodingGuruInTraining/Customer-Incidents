@@ -46,5 +46,10 @@ namespace Project_19_1_Customer_Incidents
             }
 
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

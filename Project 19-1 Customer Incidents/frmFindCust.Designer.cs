@@ -165,6 +165,7 @@
             // 
             // stateToolStripTextBox
             // 
+            this.stateToolStripTextBox.MaxLength = 2;
             this.stateToolStripTextBox.Name = "stateToolStripTextBox";
             this.stateToolStripTextBox.Size = new System.Drawing.Size(100, 25);
             // 
@@ -194,6 +195,7 @@
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmFindCust
             // 
