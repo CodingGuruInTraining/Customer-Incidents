@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project_19_1_Customer_Incidents
 {
-    public partial class Form1 : Form
+    public partial class CustomerIncidents : Form
     {
-        public Form1()
+        public CustomerIncidents()
         {
             InitializeComponent();
         }

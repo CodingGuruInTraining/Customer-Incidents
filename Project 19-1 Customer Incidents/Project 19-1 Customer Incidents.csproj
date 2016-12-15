@@ -61,11 +61,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="CustomerIncidents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CustomerIncidents.Designer.cs">
+      <DependentUpon>CustomerIncidents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddIncident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddIncident.Designer.cs">
+      <DependentUpon>frmAddIncident.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFindCust.cs">
       <SubType>Form</SubType>
@@ -80,8 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TechSupport_DataDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="CustomerIncidents.resx">
+      <DependentUpon>CustomerIncidents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIncident.resx">
+      <DependentUpon>frmAddIncident.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFindCust.resx">
       <DependentUpon>frmFindCust.cs</DependentUpon>

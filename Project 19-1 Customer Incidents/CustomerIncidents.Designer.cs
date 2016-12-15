@@ -1,6 +1,6 @@
 ﻿namespace Project_19_1_Customer_Incidents
 {
-    partial class Form1
+    partial class CustomerIncidents
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             System.Windows.Forms.Label cityLabel;
             System.Windows.Forms.Label phoneLabel;
             System.Windows.Forms.Label emailLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerIncidents));
             this.customerIDTextBox = new System.Windows.Forms.TextBox();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.techSupport_DataDataSet = new Project_19_1_Customer_Incidents.TechSupport_DataDataSet();
